@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import styled from 'styled-components/native'
 import { persian } from './src/utils/colors'
 import { Entypo } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -64,7 +63,6 @@ export class App extends Component {
     setLocalNotification()
   }
   render() {
-    console.log("app",this.props)
     return (
       <Provider store={store}>
         <NavigationContainer>
