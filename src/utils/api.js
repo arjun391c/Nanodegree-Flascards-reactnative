@@ -50,7 +50,7 @@ const dummyData = {
 export const retrieveDecks = () => {
   return AsyncStorage.getItem(FLASHCARD_STORAGE_KEY).then(results => {
     const data = JSON.parse(results);
-    return dummyData;
+    return data;
   });
 };
 
