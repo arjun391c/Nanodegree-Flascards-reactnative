@@ -5,8 +5,8 @@ import * as Permissions from 'expo-permissions'
 const NOTIFICATION_KEY = "FlashCards:notifications";
 
 export const createNotification = () => ({
-  title: "Don't forget to practice",
-  body: "Your flash cards want to see you today.",
+  title: "Hey 👋,Don't forget to practice",
+  body: "Your flash cards are ready, let's take a quiz.",
   ios: {
     sound: false
   },
