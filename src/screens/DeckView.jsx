@@ -12,12 +12,13 @@ import { seaweed } from '../utils/colors'
 const DeckView = (props) =>{
         const [ modalOpen, setModalOpen ] = useState(false)
 
-        const [fadein, setFadein] = useState(new Animated.Value(0))
+        const fadein = useRef(new Animated.Value(0)).current
 
         useEffect(() => {
             Animated.timing( fadein ,{
                 toValue: 1,
-                duration: 500,
+                duration: 1500,
+                useNativeDriver: true,
             }).start()
         },[])
         
@@ -26,7 +27,7 @@ const DeckView = (props) =>{
         const len = questions.length
         
         return (
-            <View style={[styles.container, {opacity : 1}]}>
+            <View style={styles.container}>
                 <AddCard
                     modalOpen={modalOpen}
                     setModalOpen={setModalOpen}
@@ -38,31 +39,33 @@ const DeckView = (props) =>{
                         id={id}
                     />
                 </View>
-                <View style={styles.cards}>
-                    { len !== 0 
-                    ?   <FlatList 
-                            style={styles.flatList}
-                            horizontal={true}
-                            data={questions}
-                            keyExtractor={item => item.answer}
-                            renderItem={({item,index}) => <Card card={item} index={index}/>}
+                <Animated.View style={{opacity : fadein}}>
+                    <View style={styles.cards}>
+                        { len !== 0 
+                        ?   <FlatList 
+                                style={styles.flatList}
+                                horizontal={true}
+                                data={questions}
+                                keyExtractor={item => item.answer}
+                                renderItem={({item,index}) => <Card card={item} index={index}/>}
+                            />
+                        :   <Text style={styles.nocard}>Hey 👋,You didn't create any Card!</Text>
+                        }
+                    </View>
+                    <View style={styles.buttons}>
+                        { len !== 0 && <Button
+                                        style={styles.button}
+                                        title={"Take a Quiz"}
+                                        onPress={ () => navigation.navigate('Quiz',{deck}) }
+                                    />
+                        }
+                        <Button
+                            style={styles.button}
+                            title={"Add a new Card"}
+                            onPress={() =>  {setModalOpen(!modalOpen); }}
                         />
-                    :   <Text style={styles.nocard}>Hey 👋,You didn't create any Card!</Text>
-                    }
-                </View>
-                <View style={styles.buttons}>
-                    { len !== 0 && <Button
-                                    style={styles.button}
-                                    title={"Take a Quiz"}
-                                    onPress={ () => navigation.navigate('Quiz',{deck}) }
-                                />
-                    }
-                    <Button
-                        style={styles.button}
-                        title={"Add a new Card"}
-                        onPress={() =>  {setModalOpen(!modalOpen); }}
-                    />
-                </View>
+                    </View>
+                </Animated.View>
             </View>
         )
 }

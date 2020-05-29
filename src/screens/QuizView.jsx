@@ -39,7 +39,7 @@ export class QuizView extends Component {
                             <Button
                                 style={styles.button}
                                 title={"Restart Quiz"}
-                                onPress={() => { this.setState({count: 0}) }}
+                                onPress={() => { this.setState({count: 0, score: 0}) }}
                             />
                             <Button
                                 style={styles.button}
@@ -59,8 +59,8 @@ export class QuizView extends Component {
                     style={styles.card}
                     colors={[meadow, persian, seaweed]}
                     >
-                    <Text style={styles.text}>{question}</Text>
-                    {answered && <Text style={[styles.text, styles.answer]}>"{answer}"</Text>}
+                    <Text style={styles.text}>Q:- {question}</Text>
+                    {answered && <Text style={[styles.text, styles.answer]}>A:- "{answer}"</Text>}
                     <Text style={styles.remaining}>~ Question's remaining {len-(count+1)} ~</Text>
                 </LinearGradient>
                 <View>
