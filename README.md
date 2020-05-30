@@ -26,11 +26,8 @@ The app has been tested on the following devices:
  
  ## Screenshots
  
- <img src="screenshots/Screenshot_1590815383.png" width="300"> <img src="screenshots/Screenshot_1590815388.png" width="300">
- 
- <img src="screenshots/Screenshot_1590815457.png" width="300">
- <img src="screenshots/Screenshot_1590815520.png" width="300">
- <img src="screenshots/Screenshot_1590815523.png" width="300">
- <img src="screenshots/Screenshot_1590815527.png" width="300">
- <img src="screenshots/Screenshot_1590815534.png" width="300">
- <img src="screenshots/Screenshot_1590815611.png" width="300">
+ <img src="screenshots/Screenshot_1590815383.png" width="500"> <img src="screenshots/Screenshot_1590815388.png" width="500">
+ <img src="screenshots/Screenshot_1590815457.png" width="300"> <img src="screenshots/Screenshot_1590815520.png" width="300">
+ <img src="screenshots/Screenshot_1590815523.png" width="300"> <img src="screenshots/Screenshot_1590815527.png" width="300"> 
+ <img src="screenshots/Screenshot_1590815534.png" width="300"> <img src="screenshots/Screenshot_1590815611.png" width="300">
+
