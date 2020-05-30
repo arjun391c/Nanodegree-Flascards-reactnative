@@ -27,7 +27,7 @@ const NewDeck = (props) => {
         setTitle('')
         saveDeck(deck)
         .then(dispatch(createDeck(deck)))
-        .then(navigation.navigate('Home'))
+        .then(navigation.navigate('DeckView',{deckId : deck.id}))
     }
 
         return (

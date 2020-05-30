@@ -24,7 +24,7 @@ class AddCard extends Component {
             question,
             answer
         } 
-
+        this.setState({question: '', answer: ''})
         saveCard(deckId, card)
         .then(dispatch(createCard(deckId,card)))
         .then(setModalOpen(!modalOpen))
