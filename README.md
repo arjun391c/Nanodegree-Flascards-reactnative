@@ -27,7 +27,7 @@ The app has been tested on the following devices:
  ## Device Support
  
  ![](screenshots/Screenshot_1590815383.png | width=100)
- ![](screenshots/Screenshot_1590815388.png)
+ ![](screenshots/Screenshot_1590815388.png){:width="50%"}
  ![](screenshots/Screenshot_1590815457.png)
  ![](screenshots/Screenshot_1590815520.png)
  ![](screenshots/Screenshot_1590815523.png)
